@@ -4,18 +4,14 @@ export default function SignIn() {
   return (
     <>
       <p>
-          This app demonstrates a key element of NEAR’s UX: once an app has
-          permission to make calls on behalf of a user (that is, once a user
-          signs in), the app can make calls to the blockchain for them without
-          prompting extra confirmation. So you’ll see that if you don’t
-          include a donation, your message gets posted right to the guest book.
+          This is a simple guestbook app implementation that lets you choose the wallet to connect to the NEAR blockchain.
       </p>
+	  <p>
+	  The app is built on a guestobbok contract (which you can manipulate as you like) but made to be a template to use web3.storage to store the files of your near dApps to filecoin free immutable storage service
+	  </p>
       <p>
-          But if you do add a donation, then NEAR will double-check that
+          You can sign in the guestbook Dapp and add a donation, then NEAR will double-check that
           you’re ok with sending money to this app.
-      </p>
-      <p>
-          Go ahead and sign in to try it out!
       </p>
     </>
   );
