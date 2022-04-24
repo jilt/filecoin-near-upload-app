@@ -15,6 +15,8 @@ export default function Form({ onSubmit, currentUser }) {
             id="message"
             required
           />
+          </p>
+          <p>
           <label htmlFor="upload">Upload :</label>
           <input type="file"
             id="upload" name="upload"></input>

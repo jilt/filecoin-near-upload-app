@@ -21,7 +21,6 @@ const App = ({selector, currentUser}) => {
   const [messages, setMessages] = useState([]);
 // storage client with token and endpoint
   useEffect(() => {
-    const client = new Web3Storage({ token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweEM3MjJiZjA0MDA2MkYwOGJjNThCNWZmMGI1MjVGNjk5NkYzOGI1NmIiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NDkwNzk4NzY4NTIsIm5hbWUiOiJTdG92ZSJ9.4NaqR63szV9E8NuWROYubYKQWfnQZz0wghJ0M4b7bfM' });
     const provider = getProvider(selector);
     provider.query({
       request_type: "call_function",
@@ -33,12 +32,13 @@ const App = ({selector, currentUser}) => {
   }, []);
 
   const onSubmit = (e) => {
+    const client = new Web3Storage({ token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweEM3MjJiZjA0MDA2MkYwOGJjNThCNWZmMGI1MjVGNjk5NkYzOGI1NmIiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NDkwNzk4NzY4NTIsIm5hbWUiOiJTdG92ZSJ9.4NaqR63szV9E8NuWROYubYKQWfnQZz0wghJ0M4b7bfM' });
     e.preventDefault();
     const {fieldset, message, upload, donation} = e.target.elements;
     fieldset.disabled = true;
 
     const provider = getProvider(selector)
-
+    console.log(upload.vale);
     const files = getFilesFromPath(upload.value)
     const rootCid = client.put(files)
 
