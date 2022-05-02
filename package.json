@@ -39,11 +39,13 @@
     "@near-wallet-selector/sender": "^3.0.2",
     "big.js": "^6.1.1",
     "env-cmd": "^10.1.0",
+    "ipfs-car": "^0.7.0",
     "near-api-js": "^0.44.2",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "regenerator-runtime": "^0.13.9"
+    "regenerator-runtime": "^0.13.9",
+    "web3.storage": "^4.2.0"
   },
   "resolutions": {
     "@babel/preset-env": "7.13.8"

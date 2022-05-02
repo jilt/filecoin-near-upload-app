@@ -19,7 +19,7 @@ export default function Messages({ messages }) {
 
           return <p key={i} className={message.premium ? 'is-premium' : ''}>
             <strong>{message.sender}</strong>:
-            <p class="message-info"><span>{message.text}</span><small>Was signed on: {formattedDate}</small></p>
+            <p className="message-info"><span>{message.text}</span><small>Was signed on: {formattedDate}</small></p>
           </p>
         }
       )}
