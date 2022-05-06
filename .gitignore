@@ -40,7 +40,7 @@ build/Release
 
 # Dependency directories
 node_modules/
-!/node_modules/web3.storage/
+!node_modules/web3.storage/
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
