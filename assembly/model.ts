@@ -8,11 +8,13 @@ export class PostedMessage {
   premium: boolean;
   sender: string;
   datetime: u64;
+  rootCid: string;
 
   constructor(public text: string) {
     this.premium = context.attachedDeposit >= u128.from('10000000000000000000000');
     this.sender = context.sender;
     this.datetime = context.blockTimestamp;
+	this.rootCid = context.rootCid;
   }
 }
 /**

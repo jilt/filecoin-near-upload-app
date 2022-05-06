@@ -4,14 +4,15 @@ export default function SignIn() {
   return (
     <>
       <p>
-          This is a simple guestbook app implementation that lets you choose the wallet to connect to the NEAR blockchain.
+          This is a simple Near app to upload files on <a href="https://web3/storage" title="filecoin storage" target="_blank">web3.storage</a>.
       </p>
 	  <p>
-	  The app is built on a guestbook contract (which you can manipulate as you like) but made to be a template to use web3.storage to store the files of your near dApps to filecoin free immutable storage service
+	  Sign in then upload files with <a href="https://web3.storage/docs/how-tos/generate-api-token/" title="web3.storage docs" target="_blank">your API token</a>, when the file is uploaded you'll get the immutable link and timestamp.
 	  </p>
       <p>
-          You can sign in the guestbook Dapp and add a donation, then NEAR will double-check that
+          You can add a donation, then NEAR will double-check that
           you’re ok with sending money to this app.
+		  Check the open source code at this link.
       </p>
     </>
   );

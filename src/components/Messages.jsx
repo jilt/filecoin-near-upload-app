@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default function Messages({ messages }) {
   return (
     <>
-      <h2>Messages</h2>
+      <h2>Uploads</h2>
       {messages.map((message, i) =>
         // TODO: format as cards, add timestamp
         {
@@ -19,7 +19,7 @@ export default function Messages({ messages }) {
 
           return <p key={i} className={message.premium ? 'is-premium' : ''}>
             <strong>{message.sender}</strong>:
-            <p className="message-info"><span>{message.text}</span><small>Was signed on: {formattedDate}</small></p>
+            <p className="message-info"><span>{message.rootCid}</span><small>Was Uploaded on: {formattedDate}</small></p>
           </p>
         }
       )}

@@ -13,6 +13,7 @@ const MESSAGE_LIMIT = 10;
 export function addMessage(text: string): void {
   // Creating a new message and populating fields with our data
   const message = new PostedMessage(text);
+  const 
   // Adding the message to end of the persistent collection
   messages.push(message);
 }
@@ -29,4 +30,5 @@ export function getMessages(): PostedMessage[] {
     result[i] = messages[i + startIndex];
   }
   return result;
+  console_log(result);
 }
