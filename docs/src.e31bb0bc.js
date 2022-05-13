@@ -63702,7 +63702,7 @@ const App = _ref => {
     selector.signOut();
   };
 
-  return /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h1", null, "NEAR Guest Book"), currentUser ? /*#__PURE__*/_react.default.createElement("button", {
+  return /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h1", null, "NEAR web3.storage file upload Dapp"), currentUser ? /*#__PURE__*/_react.default.createElement("button", {
     onClick: signOut
   }, "Log out") : /*#__PURE__*/_react.default.createElement("button", {
     onClick: signIn
