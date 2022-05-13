@@ -9,4 +9,4 @@ License MIT
 Please use it for the next filecoin hackathons!
 Just type yarn dev:start to try on near testnet!
 
-[Video Demo](https://watch.screencastify.com/v/c1U67F0gmEgbbV5kmoZy)
+[Demo (NEAR testnet)](https://jilt.github.io/filecoin-near-upload-app/)
