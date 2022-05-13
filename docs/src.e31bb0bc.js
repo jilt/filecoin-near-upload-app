@@ -74775,9 +74775,9 @@ Object.defineProperty(exports, "setupSender", {
 
 var _sender = require("./lib/sender");
 },{"./lib/sender":"../node_modules/@near-wallet-selector/sender/src/lib/sender.js"}],"../node_modules/@near-wallet-selector/near-wallet/assets/near-wallet-icon.png":[function(require,module,exports) {
-module.exports="/near-wallet-icon.133daff6.png";
+module.exports="/filecoin-near-upload-app/near-wallet-icon.133daff6.png";
 },{}],"../node_modules/@near-wallet-selector/sender/assets/sender-icon.png":[function(require,module,exports) {
-module.exports="/sender-icon.d4ec4a75.png";
+module.exports="/filecoin-near-upload-app/sender-icon.d4ec4a75.png";
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
