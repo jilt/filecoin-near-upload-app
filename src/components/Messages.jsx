@@ -16,10 +16,11 @@ export default function Messages({ messages }) {
           let minute = d.getMinutes();
           let second = d.getSeconds();
           const formattedDate = `${date}.${month}.${year} ${hour}:${minute}:${second}`
+		  const url = `https://${message.text}.ipfs.dweb.link/`;
 
           return <p key={i} className={message.premium ? 'is-premium' : ''}>
             <strong>{message.sender}</strong>:
-            <p className="message-info"><span>{message.rootCid}</span><small>Was Uploaded on: {formattedDate}</small></p>
+            <p className="message-info"><a href={url} title="immutable stored files" target="_blank">Uploaded files</a><small>Was Uploaded on: {formattedDate}</small></p>
           </p>
         }
       )}

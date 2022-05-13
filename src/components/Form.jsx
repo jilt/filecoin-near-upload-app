@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Big from 'big.js';
 import { useFilePicker } from "use-file-picker";
 
-export default function Form({ onSubmit, currentUser }) {
+export default function Form({ onSubmit, currentUser, handleChangeFile, files }) {
 	 const [openFileSelector, { filesContent, loading, errors, plainFiles, clear }] = useFilePicker({
      multiple: true,
      readAs: 'DataURL',
@@ -22,9 +22,9 @@ export default function Form({ onSubmit, currentUser }) {
   return (
     <form onSubmit={onSubmit}>
       <fieldset id="fieldset">
-        <p>Sign the guest book, { currentUser.accountId }!</p>
+        <p>Upload your files on Web3.storage, paste here your <a href="https://web3.storage/tokens/" title="web.storage" target="_blank">API</a> token{ currentUser.accountId }!</p>
         <p className="highlight">
-          <label htmlFor="message"><a href="https://web3.storage" title="filecoin storage" target="blank">Storage</a> API token:</label>
+          <label htmlFor="message"><a href="https://web3.storage" title="filecoin storage" target="blank">web3 Storage</a> API token:</label>
           <input
             autoComplete="off"
             autoFocus
@@ -34,11 +34,14 @@ export default function Form({ onSubmit, currentUser }) {
           </p>
           <p className="highlight">
           <label htmlFor="upload">Upload :</label><br/>
-          <button onClick={() => openFileSelector()}>Select file </button>
+          <label htmlFor="file-input" type="button" className="inputFile">
+            Select file
+          </label>
+          <input id="file-input" type="file"  onChange={handleChangeFile} hidden={true} required={true}/>
 		  <button onClick={() => clear()}>Clear</button>
 		  <br/>
 		  Number of selected files:
-		  {plainFiles.length}
+		  {files?.length > 0 ? " " + files.length : " " + 0}
 		  <br/>
 		  {/* If readAs is set to DataURL, You can display an image */}
 		  {!!filesContent.length && <img src={filesContent[0].content} />}
@@ -61,7 +64,7 @@ export default function Form({ onSubmit, currentUser }) {
           <span title="NEAR Tokens">Ⓝ</span>
         </p>
         <button type="submit">
-          Sign
+          Upload File
         </button>
       </fieldset>
     </form>

@@ -125,3 +125,23 @@ button {
   padding-left: 0.25em;
   margin-left: -0.5em;
 }
+
+.inputFile {
+  position: relative;
+  transition: top 50ms;
+  &:hover, &:focus {
+    top: -1px;
+  }
+  &:active {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    top: 1px;
+  }
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  border: inherit;
+  padding: 12px;
+  border-radius: 5px;
+}
